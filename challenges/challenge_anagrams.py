@@ -1,15 +1,15 @@
-def selection_sort(input_list):
-    length = len(input_list)
+def selection_sort(list):
+    length = len(list)
     for index in range(length):
         min_index = index
 
         for x in range(index + 1, length):
-            if input_list[x] < input_list[min_index]:
+            if list[x] < list[min_index]:
                 min_index = x
 
-        input_list[min_index], input_list[index] = input_list[index], input_list[min_index]
+        list[min_index], list[index] = list[index], list[min_index]
 
-    return input_list
+    return list
 
 
 def split(word):
@@ -24,5 +24,3 @@ def is_anagram(first_string: str, second_string: str):
     second = selection_sort(second_splied)
 
     return first == second
-
-is_anagram("acd", "xca")
